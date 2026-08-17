@@ -1,9 +1,9 @@
-import BxVentureCapitalHero from "../components/BxVentureCapitalHero";
+import BxVentureCapitalHeroV3 from "../components/BxVentureCapitalHeroV3";
 
 export default function Home() {
   return (
     <main>
-      <BxVentureCapitalHero />
+      <BxVentureCapitalHeroV3 />
     </main>
   );
 }

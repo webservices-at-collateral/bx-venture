@@ -1,108 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bx Venture Capital — Forward Thinking, Equity</title>
-<meta name="description" content="A venture capital platform that backs early- and growth-stage companies in proptech, fintech, intellectual property, and operating businesses." />
+import React from "react";
 
-<style>
-  @font-face {
-    font-family: 'Produkt';
-    src: url('./fonts/produkt-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+/**
+ * BX Venture Capital v3 — Hero Section
+ * Implementado a partir do Figma (node 74:106 — "BX Venture" v3)
+ * https://www.figma.com/design/Nsf5sTZVQZUnpNVyxlHeeb/BX-Capital--Website-Covers?node-id=74-106
+ *
+ * Layout alinhado à esquerda, com foto de prédio (recorte em seta) posicionada
+ * à direita, encostando topo e rodapé, com escala preservada. O logo já vem
+ * composto no Figma com o wordmark "Bx Venture Capital" + o subtítulo
+ * "Forward Thinking > Equity" num único SVG.
+ *
+ * Fonte: Produkt (parágrafo), carregada via next/font em app/layout.js
+ * e exposta como a CSS variable --font-produkt.
+ */
 
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .hero {
-    position: relative;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    overflow: hidden;
-    padding: 96px 24px;
-    background: linear-gradient(90deg, #424242 0%, #111111 100%);
-  }
-
-  @media (min-width: 640px) {
-    .hero {
-      padding: 96px 64px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .hero {
-      padding: 96px 112px;
-    }
-  }
-
-  .hero__bg {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    object-position: right;
-    pointer-events: none;
-  }
-
-  .hero__content {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    width: 100%;
-    max-width: 524px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 48px;
-    text-align: left;
-  }
-
-  .hero__lockup {
-    height: 54px;
-    width: auto;
-  }
-
-  @media (min-width: 640px) {
-    .hero__lockup {
-      height: 72px;
-    }
-  }
-
-  .hero__paragraph {
-    max-width: 524px;
-    font-family: 'Produkt', serif;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.72);
-    text-align: left;
-    margin: 0;
-  }
-</style>
-</head>
-<body>
-
-<section class="hero">
-  <img class="hero__bg" src="./images/hero-venture.png" alt="" aria-hidden="true" />
-
-  <div class="hero__content">
-
-    <!-- Lockup: logo "Bx Venture Capital" + "Forward Thinking > Equity" (SVG real, composto no Figma) -->
-    <svg class="hero__lockup" viewBox="0 0 683 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bx Venture Capital — Forward Thinking, Equity">
+function BxVentureCapitalLockup({ className }) {
+  return (
+    <svg
+      viewBox="0 0 683 96"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      role="img"
+      aria-label="Bx Venture Capital — Forward Thinking, Equity"
+    >
 <g id="Vector">
 <path d="M5.99453 11.4257L0 3.77035H25.9845C37.5419 3.77035 44.2582 8.22297 44.2582 18.3007V18.6112C44.2582 24.2366 41.7594 28.5326 35.433 30.4855C43.1654 32.1254 46.6005 36.1878 46.6005 43.6866V43.9997C46.6005 54.3881 39.7277 59.6206 27.4699 59.6206H5.86376L5.99453 11.4257ZM24.6583 27.2829C31.608 27.2829 34.2633 24.8603 34.2633 19.158V18.8475C34.2633 13.5352 31.1386 11.4257 24.5814 11.4257H16.1461V27.2829H24.6583ZM26.2208 51.9657C33.1705 51.9657 36.3724 48.9195 36.3724 43.2172V42.9041C36.3724 37.2018 33.2476 34.3121 25.5179 34.3121H16.1463V51.9657H26.2208Z" fill="white"/>
 <path d="M55.4536 3.7165H46.4757L56.4994 16.9019L46.5519 29.9885H55.5297L60.9855 22.8099L65.4736 16.9045L65.4756 16.9019L65.4643 16.8871L60.9761 10.9822L55.4536 3.7165Z" fill="white"/>
@@ -148,14 +69,44 @@
 </g>
 
     </svg>
+  );
+}
 
-    <!-- Paragraph -->
-    <p class="hero__paragraph">
-      A venture capital platform that backs early- and growth-stage companies in proptech, fintech, intellectual property, and operating businesses. These investments extend the BX ecosystem beyond real estate and credit.
-    </p>
+export default function BxVentureCapitalHeroV3() {
+  return (
+    <section
+      className="relative flex h-screen w-full items-center overflow-hidden px-6 py-24 sm:px-16 lg:px-28"
+      style={{ background: "linear-gradient(90deg, #424242 0%, #111111 100%)" }}
+    >
+      {/* Foto do prédio (recorte em seta), à direita, encostando topo/rodapé, escala preservada */}
+      <img
+        src="/images/hero-venture.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-0 h-full w-auto object-contain object-right"
+      />
 
-  </div>
-</section>
+      <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
+        {/* Lockup: logo + "Forward Thinking > Equity" */}
+        <BxVentureCapitalLockup className="h-[54px] w-auto sm:h-[72px]" />
 
-</body>
-</html>
+        {/* Paragraph */}
+        <p
+          className="max-w-[524px] text-left"
+          style={{
+            fontFamily: "var(--font-produkt), serif",
+            fontSize: "16px",
+            fontWeight: 400,
+            lineHeight: "1.4",
+            color: "rgba(255,255,255,0.72)",
+          }}
+        >
+          A venture capital platform that backs early- and growth-stage
+          companies in proptech, fintech, intellectual property, and
+          operating businesses. These investments extend the BX ecosystem
+          beyond real estate and credit.
+        </p>
+      </div>
+    </section>
+  );
+}

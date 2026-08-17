@@ -1,7 +1,8 @@
-# Bx Venture Capital — Landing Page
+# Bx Venture Capital v3 — Landing Page
 
-Projeto Next.js (App Router) + Tailwind CSS com a hero section "Bx Venture Capital",
-implementada a partir do Figma (node 67:99).
+Projeto Next.js (App Router) + Tailwind CSS com a hero section "Bx Venture Capital" v3
+(layout alinhado à esquerda, com foto de prédio em recorte de seta à direita),
+implementada a partir do Figma (node 74:106).
 
 ## Rodar localmente
 
@@ -31,11 +32,12 @@ vercel --prod
 
 ```
 app/
-  layout.js                  # fontes (Produkt local + Inter via next/font)
-  page.js                    # renderiza a hero section
-  globals.css                # Tailwind base
+  layout.js                    # fonte Produkt local via next/font
+  page.js                      # renderiza a hero section
+  globals.css                  # Tailwind base
 components/
-  BxVentureCapitalHero.jsx   # a section em si (logo SVG + textos + badge)
-public/fonts/
-  produkt-regular.woff2
+  BxVentureCapitalHeroV3.jsx   # a section em si (lockup SVG + parágrafo)
+public/
+  fonts/produkt-regular.woff2
+  images/hero-venture.png     # foto do prédio (recorte em seta, fundo transparente)
 ```
