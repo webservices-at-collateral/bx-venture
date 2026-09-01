@@ -90,9 +90,19 @@ export default function BxVentureCapitalHeroV3() {
         }}
       />
 
+      {/* Scrim para legibilidade do texto sobre a imagem em tablet/phone */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[5] lg:hidden"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(17,17,17,0.8) 0%, rgba(17,17,17,0.6) 35%, rgba(17,17,17,0.3) 65%, rgba(17,17,17,0) 100%)",
+          pointerEvents: "none",
+        }}
+      />
       <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo + "Forward Thinking > Equity" */}
-        <BxVentureCapitalLockup className="h-[54px] w-auto sm:h-[72px]" />
+        <BxVentureCapitalLockup className="h-[40px] w-auto max-w-full sm:h-[56px] lg:h-[72px]" />
 
         {/* Paragraph */}
         <p
