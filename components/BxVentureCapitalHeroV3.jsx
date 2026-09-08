@@ -115,10 +115,10 @@ export default function BxVentureCapitalHeroV3() {
             color: "rgba(255,255,255,0.72)",
           }}
         >
-          A venture capital platform that backs early- and growth-stage
-          companies in proptech, fintech, intellectual property, and
-          operating businesses. These investments extend the BX ecosystem
-          beyond real estate and credit.
+          BX VC is the venture platform of BX Equity, deploying capital
+          into early- and growth-stage companies across prop tech, fintech,
+          and intellectual property. The firm backs strong fundamentals,
+          scalable business models, and experienced, resilient founders.
         </p>
       </div>
     </section>
