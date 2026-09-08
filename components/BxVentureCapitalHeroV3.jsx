@@ -100,13 +100,13 @@ export default function BxVentureCapitalHeroV3() {
           pointerEvents: "none",
         }}
       />
-      <div className="relative z-10 flex w-full max-w-[524px] flex-col items-start gap-12 text-left">
+      <div className="relative z-10 flex w-full max-w-[680px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo + "Forward Thinking > Equity" */}
         <BxVentureCapitalLockup className="h-[40px] w-auto max-w-full sm:h-[56px] lg:h-[72px]" />
 
         {/* Paragraph */}
         <p
-          className="max-w-[524px] text-left"
+          className="max-w-[680px] text-left"
           style={{
             fontFamily: "var(--font-produkt), serif",
             fontSize: "20px",
@@ -115,9 +115,9 @@ export default function BxVentureCapitalHeroV3() {
             color: "rgba(255,255,255,0.72)",
           }}
         >
-          BX VC is the venture platform of BX Equity, deploying capital
-          into early- and growth-stage companies across prop tech, fintech,
-          and intellectual property. The firm backs strong fundamentals,
+          BX VC is the venture platform of BX Equity, deploying capital into
+          early- and growth-stage companies across prop tech, fintech, and
+          intellectual property. The firm backs strong fundamentals,
           scalable business models, and experienced, resilient founders.
         </p>
       </div>
