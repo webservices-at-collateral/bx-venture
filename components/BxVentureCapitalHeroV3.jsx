@@ -75,7 +75,7 @@ function BxVentureCapitalLockup({ className }) {
 export default function BxVentureCapitalHeroV3() {
   return (
     <section
-      className="relative flex h-screen w-full items-start overflow-hidden px-6 pt-[4vh] sm:px-16 sm:pt-[18vh] lg:px-28 lg:pt-[25vh]"
+      className="relative flex h-screen w-full items-start overflow-hidden px-6 pt-[1vh] sm:px-16 sm:pt-[18vh] lg:px-28 lg:pt-[25vh]"
       style={{ background: "linear-gradient(90deg, #424242 0%, #111111 100%)" }}
     >
       {/* Foto do prédio (recorte em seta), à direita, encostando topo/rodapé, escala preservada */}
