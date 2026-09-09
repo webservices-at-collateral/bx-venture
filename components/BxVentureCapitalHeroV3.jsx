@@ -102,7 +102,7 @@ export default function BxVentureCapitalHeroV3() {
       />
       <div className="relative z-10 flex w-full max-w-[680px] flex-col items-start gap-12 text-left">
         {/* Lockup: logo + "Forward Thinking > Equity" */}
-        <BxVentureCapitalLockup className="h-[40px] w-auto max-w-full sm:h-[56px] lg:h-[72px]" />
+        <BxVentureCapitalLockup className="h-[40px] w-auto max-w-full sm:h-[56px] lg:h-[96px]" />
 
         {/* Paragraph */}
         <p
