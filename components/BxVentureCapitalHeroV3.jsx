@@ -72,9 +72,14 @@ function BxVentureCapitalLockup({ className }) {
 export default function BxVentureCapitalHeroV3() {
   return (
     <section
-      className="relative flex h-screen w-full items-start overflow-hidden px-6 pt-[1vh] sm:px-16 sm:pt-[18vh] lg:px-28 lg:pt-[25vh]"
+      className="relative h-screen w-full overflow-hidden"
       style={{ background: "linear-gradient(90deg, #424242 0%, #111111 100%)" }}
     >
+      {/* Wrapper que carrega o conteúdo (imagem + texto). Do mobile até 3439px
+          ocupa a section inteira (comportamento original, inalterado). A partir
+          de 3440px (breakpoint "uw", ultrawide/4K/5K) ganha max-width e é
+          centralizado, enquanto o gradiente de fundo da section continua full-bleed. */}
+      <div className="relative mx-auto flex h-full w-full items-start px-6 pt-[1vh] sm:px-16 sm:pt-[18vh] lg:px-28 lg:pt-[25vh] uw:max-w-[2560px]">
       {/* Foto do prédio (recorte em seta), à direita, encostando topo/rodapé, escala preservada */}
       <img
         src="/images/hero-venture.png"
@@ -117,6 +122,7 @@ export default function BxVentureCapitalHeroV3() {
           intellectual property. The firm backs strong fundamentals,
           scalable business models, and experienced, resilient founders.
         </p>
+      </div>
       </div>
     </section>
   );
